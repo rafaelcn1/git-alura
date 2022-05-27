@@ -1,20 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <title>Cursos da Alura Editado!!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Decodificador de texto</title>
 </head>
 
 <body>
-    <h1>Branch criada!</h1>
-    <ul>
-        <li>Vagrant</li>
-        <li>Docker</li>
-        <li>Ansible</li>
-        <li>Integraçao Continua</li>
-        <li>Mudei algo após o commit inicial</li>
-    </ul>
+    <header>
+        <div class="logo">
+            <a href="http://www.alura.com.br" target="_blank">
+                <img src="img/logo.png">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="texto">
+            <div class="frame5">
+                <p class="p1">Nenhuma mensagem encontrada</p>
+                <p class="p2">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <div class="boneco">
+                <img src="img/boneco.png">
+            </div>
+        </div>
+
+
+        <div id="frame3">
+            <div>
+                <input class="botaoCriptografar" type="button" name="criptografar-texto" value="Criptografar" onclick="cripto()">
+            </div>
+            <div>
+                <input class="botaoDescriptografar" type="button" name="descriptografar-texto" value="Descriptografar" onclick="desCripto()">
+            </div>
+
+        </div>
+        <div id="digiteSeuTexto">
+            <input type="text" class="digiteSeuTexto" placeholder="Digite seu texto!" />
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/rafael-cunha-2b6a1b65/" target="_blank">
+            <p class="copyright">&copy; Copyright: Rafael Cunha - 2022</p>
+        </a>
+
+
+    </footer>
 </body>
+
+
+
+<script src="js/script.js"></script>
 
 </html>
