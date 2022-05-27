@@ -24,7 +24,7 @@ input:focus {
 }
 
 body {
-    margin: 0% -10% 0 10%;
+    /* margin: 0% -10% 0 10%;*/
     margin-right: -10%;
     position: relative;
     width: 90%;
@@ -83,7 +83,8 @@ body {
     /* Cor */
     background: #D8DFE8;
     /* Dimensões */
-    padding-top: 250px;
+    /*padding-top: 250px;*/
+    padding-top: 150px;
     padding-left: 240px;
     padding-right: 80px;
     white-space: nowrap;
@@ -158,8 +159,10 @@ body {
     position: absolute;
     width: 680px;
     height: 67px;
-    left: 240px;
-    top: 885px;
+    /*left: 240px;*/
+    left: 150px;
+    /*top: 885px;*/
+    top: 545px;
 }
 
 .botaoCriptografar {
@@ -201,7 +204,8 @@ body {
     width: 336px;
     height: 67px;
     left: 33px;
-    top: 845px;
+    /*top: 845px;*/
+    top: 500px;
     /* Dark blue/dark-blue-300 */
     border: 1px solid #0A3871;
     color: #0A3871;
@@ -211,12 +215,14 @@ body {
 }
 
 #texto {
-    margin: 0 0 0 30%;
+    /* margin: 0 0 0 30%;*/
     /* Rectangle 1 */
     position: absolute;
     width: 400px;
-    height: 944px;
-    left: 1000px;
+    /*height: 944px;*/
+    height: 440px;
+    /*left: 1000px;*/
+    left: 930px;
     top: 40px;
     /* White */
     background: #FFFFFF;
@@ -252,7 +258,8 @@ body {
 .copyright {
     margin-right: 20%;
     font-size: 18px;
-    padding: 40px 0 0 84px;
+    /*padding: 40px 0 0 84px;*/
+    padding: 20px 0 0 84px;
     text-align: center;
     position: relative;
     margin-top: 35%;
