@@ -45,11 +45,10 @@ var cripto = function() {
         if (boneco) {
             boneco.remove();
         }
-        var frame5 = document.querySelector(".frame5");
+        var frame5 = document.querySelector("#frame5");
         if (boneco) {
             frame5.remove();
         }
-
 
         criarBotao();
 
@@ -60,7 +59,6 @@ var cripto = function() {
         } else {
             criarTextArea(fraseCriptografada);
         }
-
     }
 }
 
@@ -90,7 +88,7 @@ var colar = function() {
 
 
 function criarBotao() {
-    var texto = document.getElementById("texto");
+    var texto = document.getElementById("retangulo");
     var botaoCopiar = document.createElement("input");
     botaoCopiar.setAttribute("class", "botaoCopiar");
     botaoCopiar.setAttribute("type", "button");
@@ -98,27 +96,14 @@ function criarBotao() {
     botaoCopiar.setAttribute("value", "Copiar");
     botaoCopiar.setAttribute("onclick", "copiar()");
     texto.appendChild(botaoCopiar);
-
 }
 
 function criarTextArea(fraseCriptografada) {
-    // var escrita = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas."
-    var texto = document.getElementById("texto");
+    var texto = document.getElementById("retangulo");
     var textarea = document.createElement("textarea");
     textarea.setAttribute("class", "textoTextArea");
     textarea.setAttribute("type", "text");
     textarea.setAttribute("name", "textoTextArea");
     textarea.innerHTML = fraseCriptografada;
     texto.appendChild(textarea);
-}
-
-var acao = function() {
-    var boneco = document.querySelector(".boneco");
-    var frame5 = document.querySelector(".frame5");
-    boneco.remove();
-    frame5.remove();
-
-    criarBotao();
-    criarTextArea();
-
 }

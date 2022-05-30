@@ -1,3 +1,28 @@
+/* Obter width total do monitor usando CSS3 */
+
+@-webkit-keyframes bounceOutRight {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes bounceOutLeft {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+
 /* Cor da letra do placeholder */
 
 ::-webkit-input-placeholder {
@@ -23,21 +48,18 @@ input:focus {
     outline: 0;
 }
 
-body {
-    /* margin: 0% -10% 0 10%;*/
-    margin-right: -10%;
+html {
     position: relative;
-    width: 90%;
-    height: 100%;
-    background: #D8DFE8;
-    /* Light blue/light-blue-100 */
+    max-width: 1440px;
+    max-height: 1024px;
 }
 
-.logo {
-    /* border-color: red;
-    padding: 40px 0 0 84px;
-    border-width: medium;
-    border-style: solid;*/
+body {
+    background: #D8DFE8;
+}
+
+#cabecalho {
+    margin: 40px 1240px 916px 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -46,15 +68,52 @@ body {
     position: absolute;
     width: 120px;
     height: 48px;
-    left: 40px;
-    top: 40px;
+}
+
+.logo {
+    /* Logo */
+    width: 120px;
+    height: 48px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .frame5 {
-    /* border-color: red;
-    padding: 40px 0 0 84px;
-    border-width: medium;
-    border-style: solid;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: absolute;
+    width: 336px;
+    height: 122px;
+    margin: 619px 72px 283px 1032px;
+}
+
+.digiteSeuTexto {
+    /* Digite seu texto */
+    position: absolute;
+    /*width: 680px;*/
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    background: #D8DFE8;
+    border: none;
+    top: 168px;
+    right: 540px;
+    bottom: 808px;
+    left: 240px;
+}
+
+#frame5 {
+    /* Frame 5 */
+    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -65,40 +124,11 @@ body {
     height: 122px;
     left: 1032px;
     top: 619px;
+    background: #FFFFFF;
 }
 
-.digiteSeuTexto {
-    /* border-color: red;
-    padding: 40px 0 0 84px;
-    border-width: medium;
-    border-style: solid;*/
-    vertical-align: top;
-    /* Fonte */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0A3871;
-    /* Cor */
-    background: #D8DFE8;
-    /* Dimensões */
-    /*padding-top: 250px;*/
-    padding-top: 150px;
-    padding-left: 240px;
-    padding-right: 80px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: none;
-}
-
-.frame5 {
-    position: relative;
-    left: 30px;
-}
-
-.frame5 .p1 {
+#frame5 .p1 {
+    /* Nenhuma mensagem encontrada */
     width: 336px;
     height: 58px;
     font-family: 'Inter';
@@ -115,9 +145,11 @@ body {
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+    background: #FFFFFF;
 }
 
-.frame5 .p2 {
+#frame5 .p2 {
+    /* Digite um texto que você deseja criptografar ou descriptografar. */
     width: 336px;
     height: 48px;
     font-family: 'Inter';
@@ -134,63 +166,187 @@ body {
     order: 1;
     align-self: stretch;
     flex-grow: 0;
+    background: #FFFFFF;
 }
 
 .boneco {
-    /*position: absolute;*/
+    /* High quality products 1 1 */
+    position: absolute;
     width: 336px;
     height: 304px;
     left: 1032px;
     top: 283px;
-    margin-left: auto;
-    margin-right: auto;
+    right: 72px;
+    bottom: 437px;
+    background: #FFFFFF;
+}
+
+#frame1 {
+    /* Frame 1 */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 252px;
+    height: 18px;
+    top: 851px;
+    right: 948px;
+    bottom: 155px;
+    left: 240px;
+}
+
+#frame1 .exclamacao {
+    /* bi:exclamation-circle-fill */
+    width: 16px;
+    height: 16px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#frame1 .exclamacao img {
+    /* Group */
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+#frame1 .p1 {
+    /* Apenas letras minúsculas e sem acento. */
+    width: 228px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+    /* Gray/gray-400 */
+    color: #495057;
+    opacity: 0.8;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#retangulo {
+    /* Rectangle 1 */
+    /* Para jogar a DIV retangulo para trás da DIV frame5 */
+    position: relative;
+    z-index: -1;
+    width: 400px;
+    height: 944px;
+    background: #FFFFFF;
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    top: 40px;
+    right: 40px;
+    bottom: 40px;
+    left: 1000px;
+    display: flex;
 }
 
 #frame3 {
-    /* Bordas */
-    /* border-color: red;
-    padding: 40px 0 0 84px;
-    border-width: medium;
-    border-style: solid;*/
+    /* Frame 3 */
+    /* Auto layout */
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
     position: absolute;
     width: 680px;
     height: 67px;
-    /*left: 240px;*/
-    left: 150px;
-    /*top: 885px;*/
-    top: 545px;
+    top: 885px;
+    right: 520px;
+    bottom: 72px;
+    left: 240px;
 }
 
-.botaoCriptografar {
-    width: 328px;
-    height: 67px;
+#frame3 #botaoCriptografar {
+    /* Button */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    /* Dark blue/dark-blue-300 */
     background: #0A3871;
     border-radius: 24px;
-    color: #FFFFFF;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 19px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
     text-align: center;
 }
 
-.botaoDescriptografar {
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-    color: #0A3871;
-    background: #D8DFE8;
+#frame3 #botaoCriptografar .botaoCriptografar {
+    /* Button */
+    width: 280px;
+    height: 19px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 16px;
     line-height: 19px;
     text-align: center;
+    /* White */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    background: #0A3871;
+    border: none;
+    cursor: pointer;
+}
+
+#frame3 #botaoDescriptografar {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    /* Light gray */
+    background: #D8DFE8;
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#frame3 #botaoDescriptografar .botaoDescriptografar {
+    /* Button */
+    width: 280px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    border: none;
+    background: #D8DFE8;
+    cursor: pointer;
 }
 
 .botaoCopiar {
@@ -204,25 +360,22 @@ body {
     width: 336px;
     height: 67px;
     left: 33px;
-    /*top: 845px;*/
-    top: 500px;
+    top: 845px;
     /* Dark blue/dark-blue-300 */
     border: 1px solid #0A3871;
     color: #0A3871;
     border-radius: 24px;
     text-align: center;
-    font-size: 32px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #texto {
-    /* margin: 0 0 0 30%;*/
     /* Rectangle 1 */
     position: absolute;
-    width: 400px;
-    /*height: 944px;*/
-    height: 440px;
-    /*left: 1000px;*/
-    left: 930px;
+    width: 336px;
+    height: 781px;
+    left: 1000px;
     top: 40px;
     /* White */
     background: #FFFFFF;
@@ -234,8 +387,10 @@ body {
 .textoTextArea {
     width: 336px;
     height: 781px;
-    left: 1032px;
     top: 72px;
+    right: 72px;
+    bottom: 171px;
+    left: 1032px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
