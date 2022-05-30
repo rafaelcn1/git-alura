@@ -411,17 +411,16 @@ body {
 }
 
 .copyright {
-    margin-right: 20%;
     font-size: 18px;
-    /*padding: 40px 0 0 84px;*/
-    padding: 20px 0 0 84px;
     text-align: center;
-    position: relative;
-    margin-top: 35%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: bold;
     color: #0A3871;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    top: 100px;
 }
 
 footer a {
